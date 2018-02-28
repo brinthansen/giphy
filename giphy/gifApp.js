@@ -10,6 +10,10 @@
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x 
          + "&api_key=dc6zaTOxFJmzC&limit=10";
 
+         
+
+                  
+
 
         $.ajax({
           url: queryURL,  
@@ -18,26 +22,29 @@
           .done(function(response) {
         	var results = response.data;
         	console.log(results);
-        	for (var i = 0; i <results.length; i++){
+        	for (var i = 0; i < results.length; i++){
 
-        	var gifDiv = $("<div>");
+
+
+          var newGifDiv = $("div");
         	var rating = results[i].rating;
         	var animatedSrc = results[i].images.downsized_large.url;
         	var staticSrc = results[i].images.downsized_still.url;
         	var gifImage = $("<img>");
-        	var p = $("<p>").text("Rating: " + rating);
-
+        	var p = $("<p>").text("rating:" + rating);
+           
         	gifImage.attr("src", staticSrc);
         	gifImage.addClass("gifGiphy");
         	gifImage.attr("data-still", staticSrc);
         	gifImage.attr("data-animate", animatedSrc);
-        	gifDiv.append(p);
-        	gifDiv.append(gifImage);
+        	newGifDiv.append(p);
+        	newGifDiv.append(gifImage); 
 
-        	$(".gif-view").prepend(gifDiv);
-          $(".gif-view").val('');               
-                 
-}       	       
+
+          $('newGifDiv').attr('id', 'gif');
+          $(".gif-view").prepend(newGifDiv);
+          $(".gif-view").val("");      
+           }            	       
 	});
 }
 

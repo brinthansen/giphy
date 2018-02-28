@@ -1,4 +1,4 @@
-div.search{
+.search{
 	color: green;
 	font-family: Helvetica;
 	background: yellow;
@@ -17,7 +17,7 @@ div.search{
 
 }
 
-
+$
 #fullPage {
     width: 100px;
     height: 100px;
