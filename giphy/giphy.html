@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+
+	
 	<meta charset="utf-8">
 	<title>Giphy generator</title>
-</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+<head></head>
 
 <body id=fullPage>
 
@@ -14,22 +22,32 @@
 <div class="search">
 	  	<form class="form-inline" id="gifSearch">
 	  	<div class="form-group">
-	  	<label for="gifInput">Search for a Gif</label>
+	  	<label for="gifInput"><div id=searchText>Search<br>for<br>a<br>Gif</div></label>
   		<input type="text" id="gifInput">
 		</div>
 		<div>
+
+
 		<input id="addGif" type="submit" value="submit">
 	</div>
-    	<button type="button|submit|reset">Clear</button>
+	<div>
+    	<input id="clearButton" type="submit" value="reset">
+    </div>
   </form>
 </div>
+	
 
 	 <div class ="container2">
     <div class="buttons">
-      <button class="btn btn-primary" id="gif" data-search="Hello Kitty">Hello Kitty</button>
-      <button class="btn btn-primary" id="gif" data-search="Snoopy Joe Cool">Joe Cool</button>
-      <button class="btn btn-primary" id="gif" data-search="Moomin">Moomin</button>
-      <button class="btn btn-primary" id="gif" data-search="Roger Rabbit">Roger Rabbit</button>
+      <button class="btn btn-primary" id="gif" data-search="Soup">Soup</button>
+      <br>
+      <button class="btn btn-primary" id="gif" data-search="Bread">Bread</button>
+      <br>
+      <button class="btn btn-primary" id="gif" data-search="funny Coffee">Coffee</button>
+      <br>
+      <button class="btn btn-primary" id="gif" data-search="anime food">MMmmMmmm</button>
+      <br>
+      <button class="btn btn-primary" id="gif" data-search="swedish chef">Mwah</button>
       </div>
   </div>
 
@@ -37,12 +55,21 @@
       <div id="myButtons"></div>
     </div>
   </div> 
- 
+	<div id="container">
 	<div class = "gif-view"></div>
 </div>
+<p>
+	 
+    
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="gifApp.js"></script>
+
+<audio autoplay="true" src="sound/bakerman.mp3">
+
   
 </body>
 </html>
